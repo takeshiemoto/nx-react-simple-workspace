@@ -68,6 +68,6 @@
     }
   },
   "lint-staged": {
-    "*.format:write": "prettier --write"
+    "*": "yarn run lint"
   }
 }
