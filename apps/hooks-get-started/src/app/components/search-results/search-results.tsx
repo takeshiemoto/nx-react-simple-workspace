@@ -5,7 +5,7 @@ import './search-results.scss';
 /* eslint-disable-next-line */
 export interface SearchResultsProps {}
 
-export interface SearchResults {
+export interface ApiResponse {
   hits: any[];
 }
 
@@ -18,7 +18,7 @@ export const SearchResults = (props: SearchResultsProps) => {
       const response = await fetch(
         'https://hn.algolia.com/api/v1/search?query=' + query
       );
-      const data = (await response.json()) as SearchResults;
+      const data = (await response.json()) as ApiResponse;
       setData(data);
     }
     fetchData();
@@ -41,5 +41,3 @@ export const SearchResults = (props: SearchResultsProps) => {
     </>
   );
 };
-
-export default SearchResults;

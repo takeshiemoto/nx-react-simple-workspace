@@ -1,6 +1,6 @@
 import React from 'react';
 import './app.scss';
-import SearchResults from './components/search-results/search-results';
+import { SearchResults } from './components/search-results/search-results';
 
 export const App = () => {
   const title = 'Hooks get started';
