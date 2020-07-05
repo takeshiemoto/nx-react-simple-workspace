@@ -1,10 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
+import React from "react";
+import { render } from "@testing-library/react";
 
-import SearchResults from './search-results';
+import SearchResults from "./search-results";
 
-describe(' SearchResults', () => {
-  it('should render successfully', () => {
+describe(" SearchResults", () => {
+  it("should render successfully", () => {
     const { baseElement } = render(<SearchResults />);
     expect(baseElement).toBeTruthy();
   });

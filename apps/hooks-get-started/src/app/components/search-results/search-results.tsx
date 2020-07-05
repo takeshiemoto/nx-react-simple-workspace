@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-import './search-results.scss';
+import "./search-results.scss";
 
 /* eslint-disable-next-line */
 export interface SearchResultsProps {}
@@ -11,12 +11,12 @@ export interface ApiResponse {
 
 export const SearchResults = (props: SearchResultsProps) => {
   const [data, setData] = useState({ hits: [] });
-  const [query, setQuery] = useState('react');
+  const [query, setQuery] = useState("react");
 
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        'https://hn.algolia.com/api/v1/search?query=' + query
+        "https://hn.algolia.com/api/v1/search?query=" + query
       );
       const data = (await response.json()) as ApiResponse;
       setData(data);
