@@ -1,12 +1,13 @@
 import React from "react";
 import "./app.scss";
 import { SearchResults } from "./components/search-results/search-results";
+import { Counter } from "./components/counter/counter";
 
 export const App = () => {
   const title = "Hooks get started";
   return (
     <div className="app">
-      <h1>{title}</h1>
+      <Counter />
       <SearchResults />
     </div>
   );
