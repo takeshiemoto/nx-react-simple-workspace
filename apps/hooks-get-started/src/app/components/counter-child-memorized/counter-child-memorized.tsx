@@ -3,7 +3,8 @@ import React from "react";
 import "./counter-child-memorized.scss";
 
 export interface CounterChildMemorizedProps {
-  count: number;
+  count?: number;
+  handleClick?: () => void;
 }
 
 export const CounterChildMemorized = React.memo(
