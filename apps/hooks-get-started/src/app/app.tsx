@@ -6,6 +6,7 @@ import { CounterFunctionProps } from "./components/counter-function-props/counte
 import { CounterUseCallbackProps } from "./components/counter-use-callback-props/counter-use-callback-props";
 import { CounterDouble } from "./components/counter-double/counter-double";
 import { CounterUseMemoDouble } from "./components/counter-use-memo-double/counter-use-memo-double";
+import { CounterUseRef } from "./components/counter-use-ref/counter-use-ref";
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
       <CounterUseCallbackProps />
       <CounterDouble />
       <CounterUseMemoDouble />
+      <CounterUseRef />
       <SearchResults />
     </div>
   );
