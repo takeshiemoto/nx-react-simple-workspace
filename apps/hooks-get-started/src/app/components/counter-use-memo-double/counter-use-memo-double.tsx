@@ -2,9 +2,6 @@ import React, { useMemo, useState } from "react";
 
 import "./counter-use-memo-double.scss";
 
-/* eslint-disable-next-line */
-export interface CounterUseMemoDoubleProps {}
-
 export const CounterUseMemoDouble = () => {
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
@@ -27,7 +24,6 @@ export const CounterUseMemoDouble = () => {
    * ただし、関数コンポーネント内ではReact.memoが使えないので注意！！
    */
   const CountView = useMemo(() => {
-    console.log("Counter view");
     const double = doubleCount(count2);
     return (
       <div>
@@ -39,6 +35,7 @@ export const CounterUseMemoDouble = () => {
   return (
     <>
       {CountView}
+      {count2Double}
       <button onClick={() => setCount1(count1 + 1)}>Count1 up</button>
       <button onClick={() => setCount2(count2 + 1)}>Count2 up</button>
     </>
