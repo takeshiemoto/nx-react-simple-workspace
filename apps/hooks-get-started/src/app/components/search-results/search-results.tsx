@@ -9,7 +9,7 @@ export interface ApiResponse {
   hits: any[];
 }
 
-export const SearchResults = (props: SearchResultsProps) => {
+const SearchResults = (props: SearchResultsProps) => {
   const [data, setData] = useState({ hits: [] });
   const [query, setQuery] = useState("react");
 
@@ -41,3 +41,5 @@ export const SearchResults = (props: SearchResultsProps) => {
     </>
   );
 };
+
+export default SearchResults;
