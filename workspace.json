@@ -109,6 +109,115 @@
           }
         }
       }
+    },
+    "ooui-destination": {
+      "root": "apps/ooui-destination",
+      "sourceRoot": "apps/ooui-destination/src",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/web:build",
+          "options": {
+            "outputPath": "dist/apps/ooui-destination",
+            "index": "apps/ooui-destination/src/index.html",
+            "main": "apps/ooui-destination/src/main.tsx",
+            "polyfills": "apps/ooui-destination/src/polyfills.ts",
+            "tsConfig": "apps/ooui-destination/tsconfig.app.json",
+            "assets": [
+              "apps/ooui-destination/src/favicon.ico",
+              "apps/ooui-destination/src/assets"
+            ],
+            "styles": ["apps/ooui-destination/src/styles.scss"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ooui-destination/src/environments/environment.ts",
+                  "with": "apps/ooui-destination/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "ooui-destination:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "ooui-destination:build:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/ooui-destination/.eslintrc",
+            "tsConfig": [
+              "apps/ooui-destination/tsconfig.app.json",
+              "apps/ooui-destination/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/ooui-destination/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/ooui-destination/jest.config.js",
+            "tsConfig": "apps/ooui-destination/tsconfig.spec.json",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "ooui-destination-e2e": {
+      "root": "apps/ooui-destination-e2e",
+      "sourceRoot": "apps/ooui-destination-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/ooui-destination-e2e/cypress.json",
+            "tsConfig": "apps/ooui-destination-e2e/tsconfig.e2e.json",
+            "devServerTarget": "ooui-destination:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ooui-destination:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:lint",
+          "options": {
+            "linter": "eslint",
+            "config": "apps/ooui-destination-e2e/.eslintrc",
+            "tsConfig": ["apps/ooui-destination-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/ooui-destination-e2e/**"]
+          }
+        }
+      }
     }
   },
   "cli": {
