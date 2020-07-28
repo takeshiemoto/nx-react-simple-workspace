@@ -7,10 +7,12 @@ import { CounterDouble } from "./components/counter-double/counter-double";
 import { CounterUseMemoDouble } from "./components/counter-use-memo-double/counter-use-memo-double";
 import { CounterUseRef } from "./components/counter-use-ref/counter-use-ref";
 import SearchResults from "./components/search-results/search-results";
+import CustomUseInput from "./components/custom-use-input/custom-use-input";
 
 export const App = () => {
   return (
     <div className="app">
+      <CustomUseInput />
       <Counter />
       <CounterFunctionProps />
       <CounterUseCallbackProps />
