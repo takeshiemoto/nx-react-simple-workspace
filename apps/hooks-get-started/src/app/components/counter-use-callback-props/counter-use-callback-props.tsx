@@ -16,9 +16,9 @@ export const CounterUseCallbackProps = () => {
   }, []);
   return (
     <>
-      <p>Counter: {count}</p>
+      <p>Counter with useCallback: {count}</p>
       <button onClick={() => setCount(count + 1)}>Increment</button>
-      <CounterChildMemorized handleClick={handleClick} />
+      <CounterChildMemorized handleClick={handleClick} count={count} />
     </>
   );
 };
