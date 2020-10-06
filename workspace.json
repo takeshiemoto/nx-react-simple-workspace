@@ -60,22 +60,27 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:lint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "linter": "eslint",
-            "config": "apps/hooks-get-started/.eslintrc",
-            "tsConfig": [
-              "apps/hooks-get-started/tsconfig.app.json",
-              "apps/hooks-get-started/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/hooks-get-started/**"]
+            "lintFilePatterns": [
+              "apps/hooks-get-started/**/*.js",
+              "apps/hooks-get-started/**/*.jsx",
+              "apps/hooks-get-started/**/*.ts",
+              "apps/hooks-get-started/**/*.tsx",
+              "node_modules/@nrwl/react/typings/cssmodule.d.ts",
+              "node_modules/@nrwl/react/typings/image.d.ts",
+              "apps/hooks-get-started/**/*.spec.ts",
+              "apps/hooks-get-started/**/*.spec.tsx",
+              "apps/hooks-get-started/**/*.spec.js",
+              "apps/hooks-get-started/**/*.spec.jsx",
+              "apps/hooks-get-started/**/*.d.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/hooks-get-started/jest.config.js",
-            "tsConfig": "apps/hooks-get-started/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -100,12 +105,12 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:lint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "linter": "eslint",
-            "config": "apps/hooks-get-started-e2e/.eslintrc",
-            "tsConfig": ["apps/hooks-get-started-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/hooks-get-started-e2e/**"]
+            "lintFilePatterns": [
+              "apps/hooks-get-started-e2e/src/**/*.ts",
+              "apps/hooks-get-started-e2e/src/**/*.js"
+            ]
           }
         }
       }
@@ -169,22 +174,27 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:lint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "linter": "eslint",
-            "config": "apps/ooui-destination/.eslintrc",
-            "tsConfig": [
-              "apps/ooui-destination/tsconfig.app.json",
-              "apps/ooui-destination/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/ooui-destination/**"]
+            "lintFilePatterns": [
+              "apps/ooui-destination/**/*.js",
+              "apps/ooui-destination/**/*.jsx",
+              "apps/ooui-destination/**/*.ts",
+              "apps/ooui-destination/**/*.tsx",
+              "node_modules/@nrwl/react/typings/cssmodule.d.ts",
+              "node_modules/@nrwl/react/typings/image.d.ts",
+              "apps/ooui-destination/**/*.spec.ts",
+              "apps/ooui-destination/**/*.spec.tsx",
+              "apps/ooui-destination/**/*.spec.js",
+              "apps/ooui-destination/**/*.spec.jsx",
+              "apps/ooui-destination/**/*.d.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "apps/ooui-destination/jest.config.js",
-            "tsConfig": "apps/ooui-destination/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
@@ -209,12 +219,12 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:lint",
+          "builder": "@nrwl/linter:eslint",
           "options": {
-            "linter": "eslint",
-            "config": "apps/ooui-destination-e2e/.eslintrc",
-            "tsConfig": ["apps/ooui-destination-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/ooui-destination-e2e/**"]
+            "lintFilePatterns": [
+              "apps/ooui-destination-e2e/src/**/*.ts",
+              "apps/ooui-destination-e2e/src/**/*.js"
+            ]
           }
         }
       }
