@@ -1,26 +1,18 @@
 import React from "react";
-import "./app.scss";
-import { Counter } from "./components/counter/counter";
-import { CounterFunctionProps } from "./components/counter-function-props/counter-function-props";
-import { CounterUseCallbackProps } from "./components/counter-use-callback-props/counter-use-callback-props";
-import { CounterDouble } from "./components/counter-double/counter-double";
-import { CounterUseMemoDouble } from "./components/counter-use-memo-double/counter-use-memo-double";
-import { CounterUseRef } from "./components/counter-use-ref/counter-use-ref";
-import SearchResults from "./components/search-results/search-results";
-import CustomUseInput from "./components/custom-use-input/custom-use-input";
+import { Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch } from "react-router-dom";
+import PageOne from "./PageOne";
 
 export const App = () => {
   return (
-    <div className="app">
-      <CustomUseInput />
-      <Counter />
-      <CounterFunctionProps />
-      <CounterUseCallbackProps />
-      <CounterDouble />
-      <CounterUseMemoDouble />
-      <CounterUseRef />
-      <SearchResults />
-    </div>
+    <Router>
+      <Link to={"/"}>Home</Link>
+      <Link to={"/one"}>PageOne</Link>
+      <Switch>
+        <Route exact path={"/"} render={() => <div>React Get Started</div>} />
+        <Route exact path={"/one"} component={PageOne} />
+      </Switch>
+    </Router>
   );
 };
 
