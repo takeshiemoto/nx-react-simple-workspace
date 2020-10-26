@@ -26,6 +26,13 @@
     "hooks-get-started-e2e": {
       "tags": [],
       "implicitDependencies": ["hooks-get-started"]
+    },
+    "hooks-master": {
+      "tags": []
+    },
+    "hooks-master-e2e": {
+      "tags": [],
+      "implicitDependencies": ["hooks-master"]
     }
   },
   "affected": {
