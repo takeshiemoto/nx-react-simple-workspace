@@ -7,7 +7,7 @@ export interface CounterChildProps {
 }
 
 export const CounterChild = (props: CounterChildProps) => {
-  console.log("CounterChild update");
+  console.log("Counter1でも2でも再レンダリングされる");
   return (
     <>
       <div>Child {props.count}</div>

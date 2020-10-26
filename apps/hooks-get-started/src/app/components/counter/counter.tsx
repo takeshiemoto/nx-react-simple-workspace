@@ -5,7 +5,6 @@ import CounterChild from "../counter-child/counter-child";
 import CounterChildMemorized from "../counter-child-memorized/counter-child-memorized";
 
 export const Counter = () => {
-  console.log("Counter update");
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
 

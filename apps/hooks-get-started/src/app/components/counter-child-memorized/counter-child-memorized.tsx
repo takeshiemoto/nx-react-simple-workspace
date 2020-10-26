@@ -9,7 +9,7 @@ export interface CounterChildMemorizedProps {
 
 export const CounterChildMemorized = React.memo(
   (props: CounterChildMemorizedProps) => {
-    console.log("CounterChildMemorized update");
+    console.log("Counter2が更新された場合のみ再レンダリング");
     /** 但し、propに関数を渡した場合は参照が異なる為、memo化されない */
     return (
       <>

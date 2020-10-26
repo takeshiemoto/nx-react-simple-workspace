@@ -26,13 +26,6 @@
     "hooks-get-started-e2e": {
       "tags": [],
       "implicitDependencies": ["hooks-get-started"]
-    },
-    "ooui-destination": {
-      "tags": []
-    },
-    "ooui-destination-e2e": {
-      "tags": [],
-      "implicitDependencies": ["ooui-destination"]
     }
   },
   "affected": {
