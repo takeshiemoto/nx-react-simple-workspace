@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import "./counter.scss";
-import CounterChild from "../counter-child/counter-child";
 import CounterChildMemorized from "../counter-child-memorized/counter-child-memorized";
+import CounterChild from '../counter-child/counter-child';
 
 export const Counter = () => {
   const [count1, setCount1] = useState(0);

@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import { Route, Link } from "react-router-dom";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import PageOne from "./PageOne";
 import { Counter } from "./components/counter/counter";
 
 export const App = () => {
+  const mogemoge = useState();
+  useEffe
+
   return (
     <Router>
       <div>
